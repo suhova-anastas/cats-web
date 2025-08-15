@@ -7,10 +7,6 @@
     </div>
 </template>
 
-<script>
-export default {
-    name: 'about-block',
-}
-</script>
+<script setup></script>
 
 <style src="./about-block.less" lang="less" />

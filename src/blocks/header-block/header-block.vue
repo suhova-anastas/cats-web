@@ -16,47 +16,37 @@
     </div>
 </template>
 
-<script>
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
 import headerNavigation from '@/data/header-navigation';
 import animateScrollTo from 'animated-scroll-to';
 
-export default {
-    name: 'header-block',
-    data() {
-        return {
-            headerNavigation,
-            isScroll: false,
-            scrollPosition: 0,
-        }
-    },
-    mounted() {
-        window.addEventListener('scroll', this.handleScroll);
-    },
-    destroyed() {
-        window.removeEventListener('scroll', this.handleScroll);
-    },
-    methods: {
-        scrollTo(block, offset) {
-        const element = document.querySelector(block);
-            if (element) {
-                animateScrollTo(element, {
-                verticalOffset: offset,
-                speed: 200,
-                maxDuration: 200,
-                minDuration: 200,
-                });
-            }
-        },
-        handleScroll() {
-        this.scrollPosition = window.scrollY;
-        if (this.scrollPosition > 0) {
-            this.isScroll = true;
-        } else if (this.scrollPosition === 0) {
-            this.isScroll = false;
-        }
-        },
-    }
-}
-</script>
+const isScroll = ref(false);
+const scrollPosition = ref(0);
 
+const scrollTo = (block, offset) => {
+  const element = document.querySelector(block);
+  if (element) {
+    animateScrollTo(element, {
+      verticalOffset: offset,
+      speed: 200,
+      maxDuration: 200,
+      minDuration: 200,
+    });
+  }
+};
+
+const handleScroll = () => {
+  scrollPosition.value = window.scrollY;
+  isScroll.value = scrollPosition.value > 0;
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
+</script>
 <style src="./header-block.less" lang="less" />

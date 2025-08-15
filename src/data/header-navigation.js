@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     text: 'О странице',
-    block: '.hero',
+    block: '.about',
     verticalOffset: 0,
   },
   {

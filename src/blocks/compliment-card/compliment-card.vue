@@ -4,16 +4,13 @@
     </div>
 </template>
 
-<script>
-export default {
-    name: 'compliment-card',
-    props: {
-        data: {
-            type: Object,
-            default: () => ({})
-        },
-    },
-}
+<script setup>
+const props = defineProps({
+    data: {
+        type: Object,
+        default: () => ({})
+    }
+})
 </script>
 
 <style src="./compliment-card.less" />

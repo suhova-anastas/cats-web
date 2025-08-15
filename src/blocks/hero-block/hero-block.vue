@@ -19,49 +19,63 @@
                     <div class="hero__title_right-line"></div>
                 </div>
             </div>
-            <div class="hero__icon">
+            <div class="hero__icon" @click="scrollTo('.about', 0)">
                 <img src="@/images/hero-block/hero-icon.png" class="image">
             </div>
         </div>
     </div>
 </template>
 
-<script>
+<script setup>
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 import Typed from 'typed.js';
+import animateScrollTo from 'animated-scroll-to';
 
-export default {
-    name: 'hero-block',
-    mounted() {
-        const optionsFirst = {
-        strings: [
-            'Нет подходящего мне макета для верстки?'
-        ],
-        typeSpeed: 40,
-        startDelay: 400,
-        loop: false,
-        smartBackspace: true,
-        showCursor: false,
-        };
+const scrollTo = (block, offset) => {
+  const element = document.querySelector(block);
+  if (element) {
+    animateScrollTo(element, {
+      verticalOffset: offset,
+      speed: 200,
+      maxDuration: 200,
+      minDuration: 200,
+    });
+  }
+};
 
-        const optionsSecond = {
-        strings: [
-            'Да ничего страшного, сделаю свой :)'
-        ],
-        typeSpeed: 40,
-        startDelay: 3400,
-        loop: false,
-        smartBackspace: true,
-        showCursor: false,
-        };
+const typedFirstTitle = ref(null);
+const typedSecondTitle = ref(null);
 
-        this.typedFirst = new Typed(this.$refs.typedFirstTitle, optionsFirst);
-        this.typedSecond = new Typed(this.$refs.typedSecondTitle, optionsSecond);
-    },
-    beforeUnmount() {
-        if (this.typedFirst) this.typedFirst.destroy();
-        if (this.typedSecond) this.typedSecond.destroy();
-    }
-}
+let typedFirst = null;
+let typedSecond = null;
+
+onMounted(() => {
+  const optionsFirst = {
+    strings: ['Нет подходящего мне макета для верстки?'],
+    typeSpeed: 40,
+    startDelay: 400,
+    loop: false,
+    smartBackspace: true,
+    showCursor: false,
+  };
+
+  const optionsSecond = {
+    strings: ['Да ничего страшного, сделаю свой :)'],
+    typeSpeed: 40,
+    startDelay: 3400,
+    loop: false,
+    smartBackspace: true,
+    showCursor: false,
+  };
+
+  typedFirst = new Typed(typedFirstTitle.value, optionsFirst);
+  typedSecond = new Typed(typedSecondTitle.value, optionsSecond);
+});
+
+onBeforeUnmount(() => {
+  if (typedFirst) typedFirst.destroy();
+  if (typedSecond) typedSecond.destroy();
+});
 </script>
 
 <style src="./hero-block.less" lang="less" />

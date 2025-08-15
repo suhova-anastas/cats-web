@@ -19,6 +19,7 @@
         display: flex;
         align-items: start;
         padding-left: 140px;
+        padding-bottom: 100px;
     }
 
     &__title-line {
@@ -36,11 +37,45 @@
         padding-left: 140px;
     }
     
+    &__swiper {
+        padding-bottom: 50px;
+    }
+    
     &__swiper-wrapper {
         display: flex;
     }
 
     &__swiper-slide {
         width: 400px !important;
+    }
+
+    &__swiper-navigation {
+        display: flex;
+    }
+
+    &__swiper-button-prev {
+        cursor: pointer;
+        width: 48px;
+        height: 48px;
+        margin-right: 20px;
+        background-image: url('@/images/swiper/navigation-prev.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+    }
+
+    &__swiper-button-next {
+        cursor: pointer;
+        width: 48px;
+        height: 48px;
+        background-image: url('@/images/swiper/navigation-next.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+    }
+
+    .swiper-button-disabled {
+        pointer-events: none;
+        opacity: 0.3;
     }
 }
