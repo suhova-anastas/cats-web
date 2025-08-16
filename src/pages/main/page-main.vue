@@ -6,6 +6,7 @@
         <AboutBlock />
         <ComplimentBlock />
         <RecipeBlock @popupEvent="openPopup" />
+        <MemecatBlock />
     </div>
 </template>
 
@@ -17,6 +18,7 @@ import HeroBlock from '@/blocks/hero-block/hero-block.vue';
 import AboutBlock from '@/blocks/about-block/about-block.vue';
 import ComplimentBlock from '@/blocks/compliment-block/compliment-block.vue';
 import RecipeBlock from '@/blocks/recipe-block/recipe-block.vue';
+import MemecatBlock from '@/blocks/memecat-block/memecat-block.vue';
 
 const isPopup = ref(false);
 
