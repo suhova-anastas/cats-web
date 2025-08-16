@@ -1,0 +1,70 @@
+@import '@/styles/vars.less';
+
+.recipe {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    background-color: @color-white;
+
+    &__container {
+        padding: 140px 120px;
+    }
+    
+    &__title {
+        font-weight: 300;
+        font-size: 32px;
+        font-style: italic;
+        padding-bottom: 50px;
+    }
+
+    &__banner {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 40px;
+        background-color: @color-light-blue;
+    }
+
+    &__banner_left {
+        display: flex;
+        flex-direction: column;
+        padding-left: 80px;
+        padding-top: 80px;
+    }
+
+    &__banner_title {
+        font-weight: 400;
+        font-size: 64px;
+        font-variant: small-caps;
+        color: @color-black;
+        margin-bottom: 20px;
+    }
+
+    &__banner_subtitle {
+        font-weight: 300;
+        font-size: 36px;
+        font-variant: small-caps;
+        color: @color-black;
+        margin-bottom: 40px;
+    }
+
+    &__banner_button {
+        cursor: pointer;
+        background-color: @color-brown;
+        font-weight: 300;
+        font-size: 36px;
+        color: @color-white;
+        max-width: 190px;
+        padding: 13px 66px;
+        border-radius: 10px;
+        text-align: center;
+        font-variant: small-caps;
+    }
+
+    &__banner_title-orange {
+        color: @color-orange;
+    }
+
+    &__banner_right {
+        max-width: 600px;
+    }
+}

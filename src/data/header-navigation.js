@@ -9,6 +9,6 @@ export default [
     id: 2,
     text: 'Подбери рецепт',
     block: '.recipe',
-    verticalOffset: -100,
+    verticalOffset: 0,
   },
 ];
