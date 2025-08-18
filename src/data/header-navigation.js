@@ -11,4 +11,10 @@ export default [
     block: '.recipe',
     verticalOffset: 0,
   },
+  {
+    id: 3,
+    text: 'Накорми кота',
+    block: '.feed',
+    verticalOffset: 0,
+  },
 ];

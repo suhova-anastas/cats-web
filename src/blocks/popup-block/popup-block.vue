@@ -120,7 +120,6 @@ const isChicken = ref(false);
 const isFish = ref(false);
 const isDontKnow = ref(false);
 const arrayResult = ref([]);
-const currentLink = ref('');
 const recipes = ref(recipesData);
 
 function handlerClickChoice(item) {

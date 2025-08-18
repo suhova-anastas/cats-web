@@ -7,6 +7,8 @@
         <ComplimentBlock />
         <RecipeBlock @popupEvent="openPopup" />
         <MemecatBlock />
+        <FeedBlock />
+        <NotcatmemeBlock />
     </div>
 </template>
 
@@ -19,6 +21,8 @@ import AboutBlock from '@/blocks/about-block/about-block.vue';
 import ComplimentBlock from '@/blocks/compliment-block/compliment-block.vue';
 import RecipeBlock from '@/blocks/recipe-block/recipe-block.vue';
 import MemecatBlock from '@/blocks/memecat-block/memecat-block.vue';
+import FeedBlock from '@/blocks/feed-block/feed-block.vue';
+import NotcatmemeBlock from '@/blocks/notcatmeme-block/notcatmeme-block.vue';
 
 const isPopup = ref(false);
 

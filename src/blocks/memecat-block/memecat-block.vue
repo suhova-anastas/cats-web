@@ -3,7 +3,7 @@
     <div class="memecat__container">
       <div class="memecat__title">
                 <div class="memecat__title-line"></div>
-                <div class="memecat__title-text">Сначала немного лучиков поддержки для вас</div>
+                <div class="memecat__title-text">Вы&nbsp;серьезно думали, что мы&nbsp;закончили с&nbsp;котячьими мемами?</div>
             </div>
       <div class="memecat__swiper-container">
         <swiper v-bind="swiperConfig" class="memecat__swiper swiper" >

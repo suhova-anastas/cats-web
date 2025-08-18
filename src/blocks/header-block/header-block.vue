@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <div class="header__container" :class="{'header-scroll': isScroll}">
-            <div class="header__logo">
+            <div class="header__logo" @click="scrollTo('.hero', 0)">
                 <img src="@/images/header-block/header-logo.png" class="image" />
             </div>
             <div class="header__navigation">
