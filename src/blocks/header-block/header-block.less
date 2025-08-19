@@ -14,13 +14,15 @@
         max-width: 1240px;
         width: 100%;
         margin-top: 22px;
+        padding: 0 20px;
         transition: all 0.3s ease;
     }
 
     &__container.header-scroll {
-        background: linear-gradient(180deg, #FFF5F0 0%, transparent 100%);
+        background: linear-gradient(180deg, @color-light-beige 0%, transparent 100%);
         border-radius: 20px;
         padding: 10px 20px;
+        margin: 20px 20px 0 20px;
     }
 
     &__navigation {
@@ -62,5 +64,101 @@
     &__logo {
         max-width: 55px;
         cursor: pointer;
+    }
+
+    &__burger-menu {
+        display: none;
+        position: relative;
+        width: 30px;
+        height: 19px;
+    }
+
+    &__burger-line {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 30px;
+        height: 3px;
+        border-radius: 1px;
+        background: @color-black;
+        transition: transform 0.3s ease;
+    }
+
+    &__burger-line:nth-child(2) {
+        transform: translateY(8px);
+    }
+
+    &__burger-line:nth-child(3) {
+        transform: translateY(16px);
+    }
+
+    &.open .header__burger-line:nth-child(1) {
+        transform: translateY(4px) rotate(45deg);
+    }
+
+    &.open .header__burger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    &.open .header__burger-line:nth-child(3) {
+        transform: translateY(4px) rotate(-45deg);
+    }
+
+    &.open .header__burger-menu {
+        position: relative;
+        z-index: 2;
+    }
+
+    &.open .header__navigation {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 21px;
+        top: 35px;
+        background: @color-light-beige;
+        padding: 120px 30px;
+        border-bottom-left-radius: 28px;
+        border-bottom-right-radius: 28px;
+        transition: 0.5s;
+    }
+
+    &.open .header__navigation-item {
+        color: #343E49;
+    }
+
+    &.open .header__navigation-item:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
+    @media (max-width: 700px) {
+        &__logo {
+            max-width: 40px;
+        }
+
+        &__navigation-item {
+            font-size: 18px;
+        }
+
+        &__navigation-item:not(:last-child) {
+            margin-right: 12px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        &__burger-menu {
+            display: block;
+        }
+
+        &__navigation {
+            display: none;
+        }
+
+        &__container,
+        &__container.header-scroll {
+            background: @color-light-beige;
+            border-radius: 20px;
+            padding: 5px 20px;
+            margin: 20px 20px 0 20px;
+        }
     }
 }

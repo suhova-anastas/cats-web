@@ -99,6 +99,156 @@
         cursor: pointer;
     }
 
+    // Media
+
+    @media (max-width: 1023px) {
+        &__background_left {
+            max-width: 130px;
+        }
+
+        &__background_right {
+            max-width: 100px;
+        }
+    }
+
+    @media (max-width: 700px) {
+        & {
+            height: 550px;
+        }
+
+        &__title_left-line,
+        &__title_right-line {
+            width: 55px;
+            margin-top: 20px;
+        }
+
+        &__title-text {
+            font-size: 36px;
+        }
+
+        &__title_left-text {
+            max-width: 432px;
+        }
+
+        &__title_right-text {
+            max-width: 368px;
+        }
+        
+        &__container {
+            padding-top: 100px;
+        }
+
+        &__content {
+            height: 260px;
+        }
+    }
+
+    @media (max-width: 550px) {
+        & {
+            height: 500px;
+        }
+
+        &__title_left-line,
+        &__title_right-line {
+            width: 40px;
+        }
+
+        &__title_left-text {
+            max-width: 372px;
+        }
+
+        &__background_left {
+            max-width: 100px;
+            top: 38%;
+        }
+
+        &__background_right {
+            max-width: 80px;
+            right: 50px;
+        }
+
+        &__icon {
+            max-width: 30px;
+        }
+
+        &__content {
+            height: 220px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        &__container {
+            padding-top: 120px;
+        }
+
+        &__title_left-text {
+            max-width: 290px;
+        }
+
+        &__title-text {
+            font-size: 28px;
+        }
+
+        &__title_right-text {
+            max-width: 286px;
+        }
+    }
+
+    @media (max-width: 430px) {
+        &__background_left {
+            max-width: 60px;
+            left: -20px;
+        }
+
+        &__background_right {
+            max-width: 60px;
+            right: 30px;
+            bottom: 30px;
+        }
+    }
+
+    @media (max-width: 400px) {
+        & {
+            height: 400px;
+        }
+
+        &__title_left-line,
+        &__title_right-line {
+            width: 30px;
+            height: 2px;
+            margin-top: 15px;
+        }
+
+        &__title_left-text {
+            margin-left: 15px;
+            max-width: 248px;
+        }
+
+        &__title_right-text {
+            margin-right: 15px;
+            max-width: 245px;
+        }
+
+        &__title-text {
+            font-size: 24px;
+        }
+
+        &__content {
+            height: 180px;
+        }
+    }
+
+    @media (max-width: 340px) {
+        &__title_left-text {
+            max-width: 199px;
+        }
+
+        &__title_right-text {
+            max-width: 215px;
+            text-align: end;
+        }
+    }
+
     // Animation
 
     &__title_left {

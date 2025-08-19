@@ -11,10 +11,11 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 450px;
+        height: 500px;
         max-width: 1240px;
         width: 100%;
         padding: 60px 20px;
+        box-sizing: border-box;
     }
 
     &__title {
@@ -32,5 +33,35 @@
         align-self: flex-end;
         max-width: 680px;
         width: 100%;
+    }
+
+    @media (max-width: 1023px) {
+        &__container {
+            height: auto;
+        }
+
+        &__title {
+            font-size: 28px;
+        }
+
+        &__title_top {
+            margin-bottom: 20px;
+        }
+
+        &__title_bottom {
+            max-width: 572px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        &__title {
+            font-size: 24px;
+        }
+    }
+
+    @media (max-width: 400px) {
+        &__title {
+            font-size: 18px;
+        }
     }
 }

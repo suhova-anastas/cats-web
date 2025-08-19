@@ -1,5 +1,5 @@
 <template>
-    <div class="header">
+    <div class="header" :class="{ open: isOpen}">
         <div class="header__container" :class="{'header-scroll': isScroll}">
             <div class="header__logo" @click="scrollTo('.hero', 0)">
                 <img src="@/images/header-block/header-logo.png" class="image" />
@@ -12,6 +12,11 @@
                 {{ item.text }}
                 </div>
             </div>
+            <div class="header__burger-menu" @click="handlerOpen">
+              <div class="header__burger-line" />
+              <div class="header__burger-line" />
+              <div class="header__burger-line" />
+            </div>
         </div>
     </div>
 </template>
@@ -23,6 +28,7 @@ import animateScrollTo from 'animated-scroll-to';
 
 const isScroll = ref(false);
 const scrollPosition = ref(0);
+const isOpen = ref(false);
 
 const scrollTo = (block, offset) => {
   const element = document.querySelector(block);
@@ -40,6 +46,10 @@ const handleScroll = () => {
   scrollPosition.value = window.scrollY;
   isScroll.value = scrollPosition.value > 0;
 };
+
+const handlerOpen = () => {
+  isOpen.value = !isOpen.value;
+}
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);

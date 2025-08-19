@@ -1,7 +1,6 @@
 <template>
     <div class="recipe">
         <div class="recipe__container">
-            <!-- <div class="recipe__title">этот &laquo;конструктор&raquo; был взят из&nbsp;моего учебно-рабочего проекта, который, к&nbsp;сожалению, под NDA, поэтому здесь я&nbsp;добавила его изменённую версию, чтобы не&nbsp;нарушать соглашение</div> -->
             <div class="recipe__banner">
                 <div class="recipe__banner_left">
                     <div class="recipe__banner_title">подбери <span class="recipe__banner_title-orange">рецепт</span> с&nbsp;котошефом</div>
@@ -12,6 +11,7 @@
                     <img src="@/images/recipe-block/recipe-image.png" class="recipe__banner-img image">
                 </div>
             </div>
+            <div class="recipe__subtitle">этот &laquo;конструктор&raquo; был взят из&nbsp;моего учебно-рабочего проекта, который, к&nbsp;сожалению, под NDA, поэтому здесь я&nbsp;добавила его изменённую версию, чтобы не&nbsp;нарушать соглашение</div>
         </div>
     </div>
 </template>

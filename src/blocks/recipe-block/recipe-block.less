@@ -9,31 +9,25 @@
     &__container {
         padding: 60px 120px;
     }
-    
-    &__title {
-        font-weight: 300;
-        font-size: 32px;
-        font-style: italic;
-        padding-bottom: 50px;
-    }
 
     &__banner {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         border-radius: 40px;
         background-color: @color-light-blue;
+        padding: 60px 80px;
     }
 
     &__banner_left {
         display: flex;
         flex-direction: column;
-        padding-left: 80px;
-        padding-top: 80px;
     }
 
     &__banner_title {
         font-weight: 400;
         font-size: 64px;
+        line-height: 100%;
         font-variant: small-caps;
         color: @color-black;
         margin-bottom: 20px;
@@ -65,6 +59,135 @@
     }
 
     &__banner_right {
-        max-width: 600px;
+        max-width: 400px;
+    }
+    
+    &__subtitle {
+        font-weight: 300;
+        font-size: 24px;
+        font-style: italic;
+        padding-top: 50px;
+    }
+
+    @media (min-width: 1921px) {
+        &__container {
+            padding: 60px 0;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+    }
+
+    @media (max-width: 1023px) {
+        &__container {
+            padding: 60px;
+        }
+
+        &__subtitle {
+            font-size: 18px;
+            padding-top: 30px;
+        }
+
+        &__banner {
+            padding: 40px 60px;
+        }
+
+        &__banner_title {
+            font-size: 48px;
+            line-height: 90%;
+        }
+
+        &__banner_subtitle {
+            font-size: 28px;
+        }
+
+        &__banner_button {
+            font-size: 28px;
+            padding: 8px 30px;
+        }
+
+        &__banner_right {
+            max-width: 300px;
+            margin-left: 20px;
+        }
+    }
+
+    @media (max-width: 930px) {
+        &__banner_title {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        &__banner_subtitle {
+            font-size: 24px;
+        }
+
+        &__banner_button {
+            font-size: 24px;
+            padding: 8px 20px;
+        }
+
+        &__banner_right {
+            max-width: 250px;
+        }
+    }
+
+    @media (max-width: 815px) {
+        &__container {
+            padding: 40px;
+        }
+
+        &__banner {
+            flex-direction: column;
+        }
+
+        &__banner_title {
+            text-align: center;
+        }
+
+        &__banner_subtitle {
+            text-align: center;
+        }
+
+        &__banner_left {
+            max-width: 500px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        &__banner_button {
+            padding: 8px 60px;
+        }
+
+        &__banner_right {
+            margin: 0;
+            max-width: 300px;
+        }
+    }
+
+    @media (max-width: 550px) {
+        &__container {
+            padding: 40px 10px;
+        }
+    }
+
+    @media (max-width: 450px) {
+        &__banner_title {
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+
+        &__banner_subtitle {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        &__banner_button {
+            font-size: 18px;
+            padding: 8px 30px;
+        }
+
+        &__banner_right {
+            max-width: 200px;
+        }
     }
 }
